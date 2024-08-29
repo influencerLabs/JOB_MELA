@@ -122,7 +122,7 @@
 
 .clientLogo-wrapper {
   display: flex;
-  animation: scroll 90s linear infinite;
+  animation: scroll 100s linear infinite;
 }
 
 .clientLogo {
@@ -219,84 +219,62 @@
       height: 100%;
       object-fit: cover;
     }
-    footer {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: auto;
-  background-color: #67b3f6;
-  padding: 60px 10%;
+    .site-footer {
+  background-color: #4a90e2;
+  color: white;
+  padding: 50px 0;
 }
 
-ul {
-  list-style: none;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-col {
-  width: 25%;
+  flex: 1;
 }
 
 .footer-col h4 {
-  position: relative;
-  margin-bottom: 30px;
-  font-weight: 500px;
-  font-size: 22px;
-  color: white;
-  text-transform: capitalize;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.footer-col h4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  background-color: #2764c0;
-  height: 2px;
-  width: 40px;
+.footer-col ul {
+  list-style: none;
+  padding: 0;
 }
 
-ul li:not(:last-child) {
-  margin-bottom: 8px;
+.footer-col ul li {
+  margin-bottom: 10px;
 }
 
-ul li a {
-  display: block;
-  font-size: 15px;
-  text-transform: capitalize;
+.footer-col ul li a {
   color: white;
   text-decoration: none;
-  transition: 0.4s;
 }
 
-ul li {
-  display: block;
-  font-size: 15px;
-  text-transform: capitalize;
-  color: white;
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-ul li a:hover {
-  color: white;
-  padding-left: 2px;
-}
-
-.links a {
-  display: inline-block;
-  height: 44px;
-  width: 44px;
-  color: white;
-  background-color: rgba(40, 130, 214, 0.8);
-  margin: 0 8px 8px 0;
+.footer-social {
   text-align: center;
-  line-height: 44px;
-  border-radius: 50%;
-  transition: 0.4s;
+  margin-top: 30px;
 }
 
-.links a:hover {
-  color: #4d4f55;
-  background-color: white;
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .footer-col {
+    margin-bottom: 30px;
+  }
 }
 
 .leapcamp-showcase {
@@ -547,16 +525,6 @@ ul li a:hover {
     text-align:center;
   }
 }
-
-/* logo css (facebook, linkedIn, Insta) */
-.sociallogos{
-  display: flex;
-  gap:0 0.5rem;
-  justify-content: center;
-  background-color: #67b3f6;
-  padding-bottom: 10px;
-}
-
   </style>
 
 </head>
@@ -949,7 +917,7 @@ ul li a:hover {
   handleOtherOption('Position', 'PositionOther');
   handleOtherOption('city', 'cityOther');
 
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxjlfg62Yr2YvBmXPdK2bT_8_Qq-V-LAnbLq6L2eo3aO_YGSAqL71sBekR1TsA3iPg6/exec';
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyMbX1xBjneceUxoX98-bg0ibM2PkdNFLpcN-XgkIMM5G7GOtOSmHclZ9r3ClnPE3x2/exec';
       const form = document.forms['submit-to-google-sheet']
       const msg = document.getElementById("msg")
 
@@ -1118,7 +1086,6 @@ ul li a:hover {
           <div class="clientLogo"><img src="assets/img/logos/Terrenos.png" alt="Logo 30" /></div>
           <div class="clientLogo"><img src="assets/img/logos/Amazon 2024 New.png" alt="Logo 31" /></div>
           <div class="clientLogo"><img src="assets/img/logos/Oracle.jpg" alt="Logo 32" /></div>
-          <div class="clientLogo"><img src="assets/img/logos/feane.PNG" alt="Logo 33" /></div>
           <div class="clientLogo"><img src="assets/img/logos/feane.PNG" alt="Logo 33" /></div>
           <div class="clientLogo"><img src="assets/img/logos/Airbnb.jpg" alt="Logo 34" /></div>
           <div class="clientLogo"><img src="assets/img/logos/PayPal New 2023.png" alt="Logo 35" /></div>
@@ -1792,8 +1759,8 @@ ul li a:hover {
                 <img src="assets/img/influencerlab.png" alt="Influencer Labs Logo" class="influencer-logo">
                 <p>Training and Placement Platform Powered By</p>
               </div> -->
-              <h2 class="title">Unlock Your Potential with Leap Camp</h2>
-              <p class="subtitle"><strong>Training and Placement Platform Powered By <a href="https://influencerlabs.in/" target="_blank" style="text-decoration: none; color: inherit;"><span style="font-size: 1.5rem; color: #004aad;" >influencer Labs</span></a> </strong></p>
+              <h2 class="title">Unlock Your Potential with <br>Leap Camp</h2>
+              <p class="subtitle"><strong>Training and Placement Platform Powered By <a href="https://influencerlabs.in/" target="_blank" style="text-decoration: none; color: inherit;"><span style="font-size: 1.5rem; color: #004aad;" >influencer labs</span></a> </strong></p>
               <ul class="features">
                 <li><i class="fas fa-rocket"></i> Cutting-edge Training Programs</li>
                 <li><i class="fas fa-handshake"></i> Industry-leading Placement Services</li>
@@ -1813,169 +1780,60 @@ ul li a:hover {
           <div style="position: absolute; right: 0; bottom: -20%; width: 100%; height: 100%; background-color: rgba(0, 120, 212, 0.2); transform: rotate(-5deg);"></div>
         </div> -->
       </div>
-      <footer>
-
-        <div class="footer-col">
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h4>Open Positions</h4>
+            <ul>
+              <li><a href="#register">Web Application Developer</a></li>
+              <li><a href="#register">Software Developer</a></li>
+              <li><a href="#register">Front End Developer</a></li>
+              <li><a href="#register">Social Media Marketing</a></li>
+              <li><a href="#register">Digital Marketing Engineer</a></li>
+              <li><a href="#register">HR Recruiter</a></li>
+              <li><a href="#register">Many more...Check here</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
             <h4>Products</h4>
             <ul>
-              <li>
-                <a href="https://www.influencerlabs.in/test_management_platform.html"
-                  target="_blank"
-                  >Test Management Platform</a
-                >
-              </li>
-              <li>
-                <a href="https://www.influencerlabs.in/e_learning_platform.html"
-                  target="_blank"
-                  >E-Learning Platform</a
-                >
-              </li>
-              <li>
-                <a href="https://www.influencerlabs.in/assessment_platform.html"
-                  target="_blank"
-                  >Assessment Platform</a
-                >
-              </li>
+                <li><a href="https://influencerlabs.in/index.html" target="_blank">Test Management Platform</a></li>
+                <li><a href="https://influencerlabs.in/index.html" target="_blank">E-Learning Platform</a></li>
+                <li><a href="https://influencerlabs.in/index.html" target="_blank">Assessment Platform</a></li>
             </ul>
-        </div>
-        <div class="footer-col">
+          </div>
+          <div class="footer-col">
             <h4>Services</h4>
             <ul>
-              <li>
-                <a href="https://www.influencerlabs.in/product-platform-practice-pngineering.html"
-                  target="_blank"
-                  >Product, Platform & Practice Engineering</a
-                >
-              </li>
-              <li>
-                <a href="https://www.influencerlabs.in/data-artificial-intelligence.html"
-                  target="_blank"
-                  >Data & Artificial Intelligence</a
-                >
-              </li>
-              <li>
-                <a href="https://www.influencerlabs.in/it-infrastructure-management.html"
-                  >IT Infrastructure Management Services</a
-                >
-              </li>
-              <li>
-                <a href="https://www.influencerlabs.in/data-analytics.html"
-                  target="_blank"
-                  >Data Analytics</a
-                >
-              </li>
-              <li>
-                <a href="https://www.influencerlabs.in/placement_services.html"
-                  target="_blank"
-                  >Placement Services</a
-                >
-              </li>
+              <li><a href="https://influencerlabs.in/index.html" target="_blank">Product, Platform & Practice Engineering</a></li>
+              <li><a href="https://influencerlabs.in/index.html" target="_blank">Data & Artificial Intelligence</a></li>
+              <li><a href="https://influencerlabs.in/index.html" target="_blank">IT Infrastructure Management Services</a></li>
+              <li><a href="https://influencerlabs.in/index.html" target="_blank"></a>Data Analytics</a></li>
+              <li><a href="https://influencerlabs.in/index.html" target="_blank">Placement Services</a></li>
             </ul>
-        </div>
-        <div class="footer-col">
-            <h4>company</h4>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
             <ul>
-              <li>
-                <a href="https://www.influencerlabs.in/about.html"
-                  target="_blank"
-                  >About Us</a
-                >
-              </li>
-
-              <li>
-                <a href="https://www.influencerlabs.in/career.html"
-                  target="_blank"
-                  >Careers</a
-                >
-              </li>
-
-              <li>
-                <a href="https://www.influencerlabs.in/testimonials.html"
-                  target="_blank"
-                  >Testimonials</a
-                >
-              </li>
+              <li><a href="https://influencerlabs.in/index.html" target="_blank">Company</a></li>
+              <li><a href="https://influencerlabs.in/about.html" target="_blank">About Us</a></li>
+              <li><a href="https://influencerlabs.in/index.html" target="_blank">Careers</a></li>
+              <!-- <li><a href="https://influencerlabs.in/index.html" target="_blank">Testimonials</a></li> -->
             </ul>
+          </div>
         </div>
-
-
-
-        <div class="footer-col">
-          <h4>Open Positions</h4>
-          <ul>
-            <li>
-              <a href="#register" >Web Application Developer</a
-              >
-            </li>
-            <li>
-              <a href="#register" >Software Developer</a
-              >
-            </li>
-            
-            
-           
-            <li>
-              <a href="#register" >Tele Sales & Field Sales: IT products & Services</a
-              >
-            </li>
-            
-           
-            <li>
-              <a href="#register" >Azure / AWS / GCP and DevOps Engineers</a
-              >
-            </li>
-
-            <li>
-              <a href="#register" >Desktop/Network/Applicaton Support-L1/L2 </a
-              >
-            </li>
-            
-            
-            
-            
-
-           
-          </ul>
-      </div>
-
-
-        
-              
-
-              <!-- <a href="https://www.linkedin.com/company/ilabs2021/" target="_blank">
-  <img src="assets/img/linkedin.png" alt="LinkedIn" width="45" height="45">
-</a>
-<a href="https://www.facebook.com/ilabs2021" target="_blank">
-  <img src="assets/img/facebook.png" alt="Facebook" width="45" height="45">
-</a>
-<a href="https://www.instagram.com/influencer_labs_in/" target="_blank">
-  <img src="assets/img/insta.png" alt="Instagram" width="45" height="45">
-</a> -->
-    
-            
-    </footer>
-
-    <div class="sociallogos" >
-      <div class="img1">
-        <a href="https://www.linkedin.com/company/ilabs2021/" target="_blank">
-          <img src="assets/img/linkedin.png" alt="LinkedIn" width="45" height="45">
-        </a>
-      </div>
-      <div class="img2">
-        <a href="https://www.facebook.com/ilabs2021" target="_blank">
-          <img src="assets/img/facebook.png" alt="Facebook" width="45" height="45">
-        </a>
-      </div>
-      <div class="img3">
-        <a href="https://www.instagram.com/influencer_labs_in/" target="_blank">
-          <img src="assets/img/insta.png" alt="Instagram" width="45" height="45">
-        </a>  
-      </div>
-      
-    
-            
-    </div> 
-     
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/ilabs2021/" target="_blank">
+            <img src="assets/img/linkedin.png" alt="LinkedIn" width="45" height="45">
+          </a>
+          <a href="https://www.facebook.com/ilabs2021" target="_blank">
+            <img src="assets/img/facebook.png" alt="Facebook" width="45" height="45">
+          </a>
+          <a href="https://www.instagram.com/influencer_labs_in/" target="_blank">
+            <img src="assets/img/insta.png" alt="Instagram" width="45" height="45">
+          </a>
+        </div>
+      </footer>
     <p class="mb-0 text-center" style="color: white;">&copy; 2024 <a href="https://influencerlabs.in/index.html" target="_blank" style="text-decoration: none; color: white;">Influencer Labs</a>. All rights reserved.</p>
 
       <!-- </footer> -->
