@@ -882,6 +882,16 @@
                 </select>
                 <input type="text" class="form-control mt-2" id="PositionOther" name="PositionOther" placeholder="Please specify" style="display: none;">
               </div>
+              <div class="mb-3">
+                <label for="Gitlink" class="form-label">Github Link</label>
+                <input type="text" class="form-control" id="Gitlink" name="Gitlink" placeholder="Enter your Github link">
+              </div>
+              
+              <div class="mb-3">
+                <label for="message" class="form-label">Message or Note</label>
+                <textarea class="form-control" name="message" id="message" rows="4"
+                placeholder="Enter your Message here"></textarea>
+              </div>
 
               <div class="text-center">
                 <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
@@ -931,7 +941,7 @@
             msg.innerHTML = "Thank you for submitting the form. We will get back to you soon."
             setTimeout(function () {
               msg.innerHTML = ""
-            }, 3000)
+            }, 2000)
 
             form.reset()
           })
@@ -1819,10 +1829,12 @@
           <div class="footer-col">
             <h4>Contact</h4>
             <ul>
-              <li><a href="https://influencerlabs.in/index.html" target="_blank">Company</a></li>
-              <li><a href="https://influencerlabs.in/about.html" target="_blank">About Us</a></li>
-              <li><a href="https://influencerlabs.in/index.html" target="_blank">Careers</a></li>
-              <!-- <li><a href="https://influencerlabs.in/index.html" target="_blank">Testimonials</a></li> -->
+              <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+918217631128" style="text-decoration: none; color:#ffffff80;">+91 82176 31128</a> </p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+919900966943" style="text-decoration: none; color:#ffffff80;">+91 99009 66943 </a></p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i><span><a href="mailto:
+                          info@influencerlabs.com" style="text-decoration: none; color:#ffffff80;">
+                          info@influencerlabs.com</a></span></p>
+              
             </ul>
           </div>
         </div>
