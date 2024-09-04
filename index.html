@@ -717,13 +717,18 @@
           <div class="col-10 col-xl-9">
             <form name="submit-to-google-sheet" method="post" action="">
               <div class="mb-3">
-                <label for="registrationDate" class="form-label">Registration Date</label>
-                <input type="date" class="form-control" id="registrationDate" name="registrationDate" required readonly>
+                <!-- <label for="registrationDate" class="form-label">Registration Date</label> -->
+                <input type="hidden" id="date-picker" name="registrationDate" value=""/>
                 <script>
-                  const registrationDate = document.getElementById('registrationDate')
-                  registrationDate.value = new Date().toISOString().split('T')[0];
-                  console.log(registrationDate.value)
-                </script>
+                  var date = new Date();
+                  var year = date.getFullYear();
+                  var month = date.getMonth() + 1;
+                  var todayDate = String(date.getDate());
+                  var datepattern = todayDate + " / " + month + " / " + year;
+                
+                  console.log(datepattern);
+                  document.getElementById("date-picker").value = datepattern;
+            </script>
               </div>
               <div class="mb-3">
                 <label for="fullName" class="form-label">Full Name</label>
