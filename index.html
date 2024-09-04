@@ -22,7 +22,7 @@
   <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/img/IL.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/IL.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/IL.png">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/IL.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/karthikeyan.png">
   <link rel="manifest" href="assets/img/favicons/manifest.json">
   <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png"> -->
   <meta name="theme-color" content="#ffffff">
@@ -712,9 +712,19 @@
             <p class="mb-5">Please fill out the form below to register</p>
           </div>
         </div>
+        
         <div class="row flex-center h-100">
           <div class="col-10 col-xl-9">
             <form name="submit-to-google-sheet" method="post" action="">
+              <div class="mb-3">
+                <label for="registrationDate" class="form-label">Registration Date</label>
+                <input type="date" class="form-control" id="registrationDate" name="registrationDate" required>
+                <script>
+                  const registrationDate = document.getElementById('registrationDate')
+                  registrationDate.value = new Date().toISOString().split('T')[0];
+                  console.log(registrationDate.value)
+                </script>
+              </div>
               <div class="mb-3">
                 <label for="fullName" class="form-label">Full Name</label>
                 <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name"
