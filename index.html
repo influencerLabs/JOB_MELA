@@ -973,7 +973,7 @@
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert("Congratulations! Our Recruitment team will get back in touch with you soon. Have a great day!"))
+        .then(response => alert("Congratulations! Our Recruitment team will get in touch with you soon. Have a great day"))
         .then(()=> {form.reset(); })
           .catch(error => console.error('Error!', error.message))
       })
