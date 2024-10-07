@@ -996,7 +996,7 @@
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
       .then(response => {
         submittedEntries.push({ fullName, email, phoneNumber }); // Store the submitted entry
-        msg.innerHTML = "Congratulations! Our Recruitment team will get in touch with you soon. Have a great day.";
+        msg.innerHTML = "Congratulations! Our Recruitment team will get in touch with you soon. Have a great day ✅.";
         form.reset(); // Reset the form
       })
       .catch(error => console.error('Error!', error.message));
